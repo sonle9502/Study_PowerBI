@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "google_trends_research"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c383fb4f-bcb2-4c80-b9c1-7f9d01ab6aca"
+  }
+}
