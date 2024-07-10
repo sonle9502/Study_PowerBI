@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "VietNamFood",
   "position": {
-    "x": 411.08614232209737,
-    "y": 22.771535580524347,
+    "x": 0,
+    "y": 0,
     "z": 0,
     "width": 674.75655430711618,
     "height": 550.11235955056179,
