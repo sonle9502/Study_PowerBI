@@ -175,13 +175,6 @@
                                 "Value": "'October'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'November'"
-                              }
-                            }
                           ]
                         ]
                       }
@@ -322,17 +315,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'November'"
-                                    }
-                                  }
-                                ]
-                              }
                             ]
                           ],
                           "columns": [
@@ -380,9 +362,6 @@
                           },
                           {
                             "0": "October"
-                          },
-                          {
-                            "0": "November"
                           }
                         ]
                       }
