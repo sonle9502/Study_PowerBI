@@ -5,6 +5,10 @@ table vietnam_food
 		formatString: 0
 		lineageTag: 5706b645-26e5-4530-9bd6-6c5da0c0384b
 
+	measure measure1 = SUMX('vietnam_food',[Bún chả])
+		formatString: 0
+		lineageTag: 4a75bb29-ba9b-405b-b753-256bb26b8de8
+
 	column date
 		dataType: dateTime
 		formatString: General Date
