@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
-  "name": "04fd765c31da48d1e200",
+  "name": "86182ce478053a80b0ac",
   "position": {
-    "x": 125.84269662921349,
-    "y": 589.66292134831463,
-    "z": 1001,
-    "width": 166.59176029962546,
-    "height": 130.63670411985018,
-    "tabOrder": 1001
+    "x": 944.41947565543069,
+    "y": 409.88764044943821,
+    "z": 2000,
+    "width": 155.80524344569289,
+    "height": 170.187265917603,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "hello"
+                    "value": "language_test"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "change1"
                   }
                 ]
               }
