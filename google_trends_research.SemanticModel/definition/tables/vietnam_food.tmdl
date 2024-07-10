@@ -1,0 +1,76 @@
+table vietnam_food
+	lineageTag: f00626d7-515a-4258-8e30-4aa835a78f50
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 084336d1-5570-4ad2-9c36-094a2735f70e
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: a88b992d-ae0d-4726-ae1b-fb5a6ca325bd
+			defaultHierarchy: LocalDateTable_eb1640a3-81ce-4745-84a2-3c132ffe8b99.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phở
+		dataType: int64
+		formatString: 0
+		lineageTag: f6b06dd0-fd19-4fe9-8acf-0fe731d228b7
+		summarizeBy: sum
+		sourceColumn: Phở
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bánh mì'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1398371b-e27f-416f-8d72-bbde9f76d9c1
+		summarizeBy: sum
+		sourceColumn: Bánh mì
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gỏi cuốn'
+		dataType: int64
+		formatString: 0
+		lineageTag: 016a6bfc-a8c7-4d79-9dde-0acee1375d23
+		summarizeBy: sum
+		sourceColumn: Gỏi cuốn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bún chả'
+		dataType: int64
+		formatString: 0
+		lineageTag: f3c43dc3-8c08-4014-8810-797bac356eb4
+		summarizeBy: sum
+		sourceColumn: Bún chả
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cà phê sữa đá'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6061cb8f-a93c-4cc6-91e2-ce6f5d3f3738
+		summarizeBy: sum
+		sourceColumn: Cà phê sữa đá
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vietnam_food = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("C116\SQLEXPRESS", "newDB"),
+				    dbo_vietnam_food = Source{[Schema="dbo",Item="vietnam_food"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_vietnam_food,{"isPartial"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

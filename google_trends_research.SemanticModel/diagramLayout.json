@@ -10,13 +10,39 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
+            "x": 568,
             "y": 0
           },
           "nodeIndex": "vietnam_food",
           "nodeLineageTag": "f00626d7-515a-4258-8e30-4aa835a78f50",
           "size": {
             "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 24
+          },
+          "nodeIndex": "country_food",
+          "nodeLineageTag": "4007d3a3-104c-4462-8bad-d7eff5d09a5d",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 12
+          },
+          "nodeIndex": "language",
+          "nodeLineageTag": "4bcbe673-f6d6-4f77-9e3e-a002975c47d1",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

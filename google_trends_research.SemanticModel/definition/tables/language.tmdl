@@ -1,0 +1,64 @@
+table language
+	lineageTag: 4bcbe673-f6d6-4f77-9e3e-a002975c47d1
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8c325a81-5d39-4cc7-bd99-53828b77be5b
+		summarizeBy: none
+		sourceColumn: date
+
+		variation バリエーション
+			isDefault
+			relationship: 88d608bf-d1b7-4818-a8d6-555581cca163
+			defaultHierarchy: LocalDateTable_b07e03e5-1875-419e-bcd9-f5255402f3e8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Python
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a06bfc5-517a-4b45-a383-b5f6318b1eeb
+		summarizeBy: sum
+		sourceColumn: Python
+
+		annotation SummarizationSetBy = Automatic
+
+	column JavaScript
+		dataType: int64
+		formatString: 0
+		lineageTag: 016b01ba-fcff-48f2-b8af-c10d032c4ff3
+		summarizeBy: sum
+		sourceColumn: JavaScript
+
+		annotation SummarizationSetBy = Automatic
+
+	column Java
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f1217e9-c122-47b3-9aae-215bfb5cc4b1
+		summarizeBy: sum
+		sourceColumn: Java
+
+		annotation SummarizationSetBy = Automatic
+
+	column isPartial
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 75f352b1-e5e9-44c1-9676-34f631448977
+		summarizeBy: none
+		sourceColumn: isPartial
+
+		annotation SummarizationSetBy = Automatic
+
+	partition language = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("C116\SQLEXPRESS", "newDB"),
+				    dbo_language = Source{[Schema="dbo",Item="language"]}[Data]
+				in
+				    dbo_language
+
+	annotation PBI_ResultType = Table
+

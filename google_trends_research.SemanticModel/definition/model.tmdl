@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["vietnam_food","country_food","language"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.930.0 (24.06)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table vietnam_food
+ref table DateTableTemplate_80108958-9ed6-4f0c-8fdf-6ba7f6268a38
+ref table LocalDateTable_eb1640a3-81ce-4745-84a2-3c132ffe8b99
+ref table country_food
+ref table LocalDateTable_d63ed62b-a9e5-41c8-bbf1-a1e276609b39
+ref table language
+ref table LocalDateTable_b07e03e5-1875-419e-bcd9-f5255402f3e8
+
+ref cultureInfo en-US
+

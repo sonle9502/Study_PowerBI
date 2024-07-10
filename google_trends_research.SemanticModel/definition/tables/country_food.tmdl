@@ -1,0 +1,55 @@
+table country_food
+	lineageTag: 4007d3a3-104c-4462-8bad-d7eff5d09a5d
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 19c59868-c95c-48c5-934b-9d8f8c095ec9
+		summarizeBy: none
+		sourceColumn: date
+
+		variation バリエーション
+			isDefault
+			relationship: a5676773-382d-41d0-a636-f7f18139aaf6
+			defaultHierarchy: LocalDateTable_d63ed62b-a9e5-41c8-bbf1-a1e276609b39.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vietnam food'
+		dataType: int64
+		formatString: 0
+		lineageTag: fc480f05-9760-4c3c-a2e5-285afa6032a0
+		summarizeBy: sum
+		sourceColumn: Vietnam food
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'China food'
+		dataType: int64
+		formatString: 0
+		lineageTag: ddd9109b-db78-4f0a-b251-252aac5695ed
+		summarizeBy: sum
+		sourceColumn: China food
+
+		annotation SummarizationSetBy = Automatic
+
+	column isPartial
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 95429c2f-ddc5-4d18-afa6-79ef2a542802
+		summarizeBy: none
+		sourceColumn: isPartial
+
+		annotation SummarizationSetBy = Automatic
+
+	partition country_food = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("C116\SQLEXPRESS", "newDB"),
+				    dbo_country_food = Source{[Schema="dbo",Item="country_food"]}[Data]
+				in
+				    dbo_country_food
+
+	annotation PBI_ResultType = Table
+

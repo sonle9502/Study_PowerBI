@@ -1,0 +1,15 @@
+relationship a88b992d-ae0d-4726-ae1b-fb5a6ca325bd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vietnam_food.date
+	toColumn: LocalDateTable_eb1640a3-81ce-4745-84a2-3c132ffe8b99.Date
+
+relationship a5676773-382d-41d0-a636-f7f18139aaf6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: country_food.date
+	toColumn: LocalDateTable_d63ed62b-a9e5-41c8-bbf1-a1e276609b39.Date
+
+relationship 88d608bf-d1b7-4818-a8d6-555581cca163
+	joinOnDateBehavior: datePartOnly
+	fromColumn: language.date
+	toColumn: LocalDateTable_b07e03e5-1875-419e-bcd9-f5255402f3e8.Date
+
