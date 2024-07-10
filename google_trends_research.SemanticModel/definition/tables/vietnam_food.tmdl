@@ -70,7 +70,5 @@ table vietnam_food
 				in
 				    #"Removed Columns"
 
-	annotation PBI_NavigationStepName = Navigation
-
 	annotation PBI_ResultType = Table
 
