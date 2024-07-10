@@ -13,6 +13,36 @@
     "visualType": "pieChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "vietnam_food"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "date"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Month"
+                }
+              },
+              "queryRef": "vietnam_food.date.Variation.Date Hierarchy.Month",
+              "nativeQueryRef": "date Month",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -117,29 +147,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "vietnam_food"
-                      }
-                    },
-                    "Property": "Bánh mì"
-                  }
-                },
-                "Function": 0
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
