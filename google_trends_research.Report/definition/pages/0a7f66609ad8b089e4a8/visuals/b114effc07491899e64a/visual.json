@@ -182,13 +182,6 @@
                                 "Value": "'November'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'December'"
-                              }
-                            }
                           ]
                         ]
                       }
@@ -340,17 +333,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'December'"
-                                    }
-                                  }
-                                ]
-                              }
                             ]
                           ],
                           "columns": [
@@ -401,9 +383,6 @@
                           },
                           {
                             "0": "November"
-                          },
-                          {
-                            "0": "December"
                           }
                         ]
                       }
